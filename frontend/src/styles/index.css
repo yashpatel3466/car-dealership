@@ -1,0 +1,347 @@
+:root {
+  --ink: #14181f;
+  --panel: #1c212b;
+  --panel-light: #262c38;
+  --line: #333a48;
+  --paper: #f4f4f2;
+  --muted: #9aa3b2;
+  --amber: #e8a33d;
+  --amber-dark: #c8862a;
+  --danger: #d9584f;
+  --radius: 10px;
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.brand-accent {
+  color: var(--amber);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-chip {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.role-badge {
+  background: var(--amber);
+  color: var(--ink);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+main {
+  flex: 1;
+  padding: 32px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.btn-primary:hover {
+  background: var(--amber-dark);
+}
+
+.btn-primary:disabled {
+  background: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--paper);
+}
+
+.btn-ghost:hover {
+  border-color: var(--amber);
+}
+
+.btn-danger {
+  background: transparent;
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: var(--danger);
+  color: var(--paper);
+}
+
+/* Auth pages */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+}
+
+.auth-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-subtitle {
+  color: var(--muted);
+  margin: -8px 0 8px;
+  font-size: 0.9rem;
+}
+
+.auth-switch {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.auth-switch a {
+  color: var(--amber);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--paper);
+  font-size: 0.95rem;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--amber);
+  outline-offset: 1px;
+}
+
+.form-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Dashboard */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.dashboard-subtitle {
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+.dashboard-status {
+  color: var(--muted);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--paper);
+  min-width: 110px;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.vehicle-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vehicle-card.is-out {
+  opacity: 0.65;
+}
+
+.vehicle-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-category {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.vehicle-status {
+  font-size: 0.7rem;
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.vehicle-title {
+  font-size: 1.5rem;
+}
+
+.vehicle-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.vehicle-price {
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.vehicle-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* Vehicle form */
+.vehicle-form {
+  background: var(--panel-light);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .topbar,
+  main {
+    padding: 18px;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
