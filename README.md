@@ -108,6 +108,13 @@ has something to talk to.
 _Add screenshots of the running app here once both servers are up —
 login/register screens, the vehicle dashboard, search/filter in action,
 and the admin add/edit/delete controls._
+![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
 
 ## Test report
 
